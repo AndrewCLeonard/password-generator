@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Password Generator</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<h1>Password Generator</h1>
+			</header>
+			<div class="card">
+				<div class="card-header">
+					<h2>Generate a Password</h2>
+				</div>
+				<div class="card-body">
+					<textarea readonly id="password" placeholder="Your Secure Password" a-label="Generated Password"></textarea>
+				</div>
+				<div class="card-footer">
+					<button id="btn" class="btn">Choose Password Options</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Trigger/Open The Modal -->
+
+		<!-- The Modal -->
+		<div id="modal" class="modal">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close">&times;</span>
+					<h2>Password Options</h2>
+				</div>
+
+				<!-- MODAL BODY START -->
+				<div class="modal-body">
+					<!-- slider start -->
+					<div class="slidecontainer">
+						<input type="range" min="8" max="128" value="12" class="slider" id="silderRange" />
+						<p>Value: <span id="sliderValue"></span></p>
+					</div>
+					<!-- slider end -->
+				</div>
+				<!-- MODAL BODY END -->
+
+				<div class="modal-footer">
+					<h3>Modal Footer</h3>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

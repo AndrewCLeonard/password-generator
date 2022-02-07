@@ -1,0 +1,285 @@
+/* ==================================================================================================== */
+/* GLOBAL STYLES */
+/* ==================================================================================================== */
+
+/* VARIABLES */
+:root {
+	--red: hsl(360, 91%, 36%);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: sans-serif;
+	background-color: #f9fbfd;
+}
+
+.wrapper {
+	padding-top: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+header {
+	text-align: center;
+	padding: 20px;
+	padding-top: 0px;
+	color: hsl(206, 17%, 28%);
+}
+
+/* ==================================================================================================== */
+/* CARD STYLES */
+/* ==================================================================================================== */
+
+.card {
+	background-color: hsl(0, 0%, 100%);
+	border-radius: 5px;
+	border-width: 1px;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+	color: hsl(206, 17%, 28%);
+	font-size: 18px;
+	margin: 0 auto;
+	max-width: 800px;
+	padding: 30px 40px;
+}
+
+.card-header::after {
+	content: " ";
+	display: block;
+	width: 100%;
+	background: #e7e9eb;
+	height: 2px;
+}
+
+.card-body {
+	min-height: 100px;
+}
+
+.card-footer {
+	text-align: center;
+}
+
+.card-footer::before {
+	content: " ";
+	display: block;
+	width: 100%;
+	background: #e7e9eb;
+	height: 2px;
+}
+
+.card-footer::after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+.btn {
+	border: none;
+	background-color: hsl(360, 91%, 36%);
+	border-radius: 25px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+	color: hsl(0, 0%, 100%);
+	display: inline-block;
+	font-size: 22px;
+	line-height: 22px;
+	margin: 16px 16px 16px 20px;
+	padding: 14px 34px;
+	text-align: center;
+	cursor: pointer;
+}
+
+button[disabled] {
+	cursor: default;
+	background: #c0c7cf;
+}
+
+.float-right {
+	float: right;
+}
+
+/* ==================================================================================================== */
+/* MODAL STYLES */
+/* ==================================================================================================== */
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	animation-name: animatetop;
+	animation-duration: 0.4s;
+}
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+/* The Close Button */
+.close {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-header {
+	padding: 2px 16px;
+	background-color: var(--red);
+	color: white;
+}
+
+/* Modal Body */
+.modal-body {
+	padding: 2px 16px;
+}
+
+/* Modal Footer */
+.modal-footer {
+	padding: 2px 16px;
+	background-color: var(--red);
+	color: white;
+}
+
+/* ==================================================================================================== */
+/* PASSWORD STYLES */
+/* ==================================================================================================== */
+
+#password {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	display: block;
+	width: 100%;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 85px;
+	font-size: 1.2rem;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 2px dashed #c0c7cf;
+	border-radius: 6px;
+	resize: none;
+	overflow: hidden;
+}
+
+/* ==================================================================================================== */
+/* SLIDER STYLES*/
+/* ==================================================================================================== */
+
+.slidecontainer {
+  width: 50%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+/* ==================================================================================================== */
+/* MEDIA QUERIES */
+/* ==================================================================================================== */
+
+@media (max-width: 690px) {
+	.btn {
+		font-size: 1rem;
+		margin: 16px 0px 0px 0px;
+		padding: 10px 15px;
+	}
+
+	#password {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 500px) {
+	.btn {
+		font-size: 0.8rem;
+	}
+}
