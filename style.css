@@ -5,11 +5,14 @@
 /* VARIABLES */
 :root {
 	--red: hsl(360, 91%, 36%);
+	--white: hsl(0, 0%, 100%);
 }
 
 *,
 *::before,
 *::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -39,6 +42,21 @@ header {
 	color: hsl(206, 17%, 28%);
 }
 
+/* ==================================================================================================== */
+/* CSS LAYOUT CLASSES */
+/* ==================================================================================================== */
+
+.float-right {
+	float: right;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  /* border: 3px solid green; */
+  /* padding: 10px; */
+}
+}
 /* ==================================================================================================== */
 /* CARD STYLES */
 /* ==================================================================================================== */
@@ -100,13 +118,19 @@ header {
 	cursor: pointer;
 }
 
+.btn-reverse-colors {
+	background-color: var(--white);
+	color: var(--red);
+}
+
+.btn-reverse-colors:hover {
+	-webkit-box-shadow: inset 0px 0px 0px 10px black;
+	-moz-box-shadow: inset 0px 0px 0px 4px black;
+	box-shadow: inset 0px 0px 0px 4px black;
+}
 button[disabled] {
 	cursor: default;
 	background: #c0c7cf;
-}
-
-.float-right {
-	float: right;
 }
 
 /* ==================================================================================================== */
@@ -135,7 +159,7 @@ button[disabled] {
 	margin: auto;
 	padding: 0;
 	border: 1px solid #888;
-	width: 80%;
+	width: 50%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	animation-name: animatetop;
 	animation-duration: 0.4s;
@@ -189,6 +213,10 @@ button[disabled] {
 /* Modal Body */
 .modal-body {
 	padding: 2px 16px;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
 }
 
 /* Modal Footer */
@@ -227,39 +255,51 @@ button[disabled] {
 /* SLIDER STYLES*/
 /* ==================================================================================================== */
 
-.slidecontainer {
-  width: 50%;
+.slide-container {
+	width: 50%;
+	/* padding: 25px; */
 }
 
+/* slider knob */
 .slider {
-  -webkit-appearance: none;
-  width: 50%;
-  height: 25px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+	-webkit-appearance: none;
+	width: 100%;
+	height: 10px;
+	border-radius: 5px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
 }
 
 .slider:hover {
-  opacity: 1;
+	opacity: 1;
 }
 
+/* slider handle */
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
+  -webkit-appearance: none; /* Override default look */
   appearance: none;
-  width: 25px;
-  height: 25px;
-  background: #04AA6D;
-  cursor: pointer;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 50%;
+  background: black; /* Black background */
+  cursor: pointer; /* Cursor on hover */
 }
 
 .slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #04AA6D;
-  cursor: pointer;
+	width: 25px; /* Set a specific slider handle width */
+	height: 25px; /* Slider handle height */
+	border-radius: 50%;
+  background: black; /* Black background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+/* ==================================================================================================== */
+/* CHECKBOX STYLES */
+/* ==================================================================================================== */
+.checkboxes {
 }
 
 /* ==================================================================================================== */

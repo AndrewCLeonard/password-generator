@@ -39,16 +39,38 @@
 				<!-- MODAL BODY START -->
 				<div class="modal-body">
 					<!-- slider start -->
-					<div class="slidecontainer">
-						<input type="range" min="8" max="128" value="12" class="slider" id="silderRange" />
-						<p>Value: <span id="sliderValue"></span></p>
+					<div class="slide-container">
+						<p>Password Character Length: <span id="sliderValue"></span></p>
+						<input type="range" min="8" max="128" value="12" class="slider" id="sliderRange" />
 					</div>
 					<!-- slider end -->
+
+					<!-- checkboxes start -->
+					<div class="checkboxes">
+						<p>Character Options:</p>
+						<input type="checkbox" name="lowercaseLetters" id="lowercaseLetters" />
+						<label for="lowercaseLetters">lowercase letters</label>
+						<br />
+
+						<input type="checkbox" name="uppercaseLetters" id="uppercaseLetters" />
+						<label for="uppercaseLetters">uppercase letters</label>
+						<br />
+
+						<input type="checkbox" name="numbers" id="numbers" />
+						<label for="numbers">numbers</label>
+						<br />
+
+						<input type="checkbox" name="specialCharacters" id="specialCharacters" />
+						<label for="specialCharacters">special characters</label>
+						<br />
+					</div>
+					<!-- checkboxes end -->
 				</div>
 				<!-- MODAL BODY END -->
-
 				<div class="modal-footer">
-					<h3>Modal Footer</h3>
+					<div class="center">
+						<button id="btn-options" class="btn btn-reverse-colors">Create Password</button>
+					</div>
 				</div>
 			</div>
 		</div>

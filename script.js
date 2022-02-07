@@ -28,7 +28,7 @@ window.onclick = function (event) {
 // SLIDER START
 // ====================================================================================================
 
-var slider = document.getElementById("silderRange");
+var slider = document.getElementById("sliderRange");
 var output = document.getElementById("sliderValue");
 output.innerHTML = slider.value;
 
