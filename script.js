@@ -38,6 +38,22 @@ slider.oninput = function () {
 // ====================================================================================================
 // SLIDER END
 // ====================================================================================================
+const newPassword = document.querySelector("#createPassword");
+newPassword.addEventListener("click", generatePassword);
+let generatePassword = () => {
+	var formData = document.querySelector("#")
+};
+/*
+
+when "Generate Password" button is clicked:
+-	the slider value 
+-	any of the checkboxes that are true
+
+are passed to the generate password function
+
+to start, I should see if I can console.log the input from the form. 
+
+*/
 
 // ------ starter code -----------------------------------------------------------------------------------------
 // Get references to the #generate element
@@ -52,4 +68,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// generateBtn.addEventListener("click", writePassword);
