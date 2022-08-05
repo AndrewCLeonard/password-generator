@@ -34,7 +34,6 @@
 					<h2>Password Options</h2>
 				</div>
 				<div class="modal-body">
-					<div></div>
 					<div class="modal-checkboxes">
 						<form>
 							<input type="checkbox" id="lowercase" name="lowercase" value="lowercase" />
@@ -45,10 +44,14 @@
 							<label for="numbers"> numbers</label><br />
 							<input type="checkbox" id="symbols" name="symbols" value="symbols" />
 							<label for="symbols"> symbols</label><br /><br />
-							<input type="range" min="8" max="30" value="12" name="length" id="passwordSlider" class="slider" /><br />
+							<input type="range" min="8" max="128" value="68" name="length" id="passwordSlider" class="slider" /><br />
 							<p>value: <span class="slider-value" id="slider-value"></span></p>
-							<button class="btn">Create</button>
+							<button class="btn" id="passwordModalBtn">Create</button>
 						</form>
+					</div>
+					<div class="generated-password-text">
+							<p>this is where the password will go</p>
+						</span>
 					</div>
 				</div>
 				<div class="modal-footer">

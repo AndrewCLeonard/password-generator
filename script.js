@@ -25,18 +25,15 @@ slider.oninput = function () {
 
 // create array of lowercase letters A-Z
 // https://betterprogramming.pub/how-to-generate-an-alphabet-javascript-array-eae6940ea646
-const lowercaseLetterArray = [...Array(26)].map((_, i) => String.fromCharCode(i + 97));
-console.log(lowercaseLetterArray);
+const lowercaseLettersArray = [...Array(26)].map((_, i) => String.fromCharCode(i + 97));
 
 // create uppercase letters array
-const uppercaseLettersArray = lowercaseLetterArray.map((letter) => {
+const uppercaseLettersArray = lowercaseLettersArray.map((letter) => {
 	return letter.toUpperCase();
 });
-console.log(uppercaseLettersArray);
 
 // create numbers array
-const numbers = [...Array(10)].map((_, i) => String.fromCharCode(i + 48));
-console.log(numbers);
+const numbersArray = [...Array(10)].map((_, i) => String.fromCharCode(i + 48));
 
 // create symbols array
 const symbols1 = [...Array(15)].map((_, i) => String.fromCharCode(i + 33));
@@ -48,4 +45,47 @@ const symbols3 = [...Array(5)].map((_, i) => String.fromCharCode(i + 91));
 const symbols4 = [...Array(4)].map((_, i) => String.fromCharCode(i + 123));
 
 const symbolsArray = [...symbols1, ...symbols2, ...symbols3, ...symbols4];
-console.log(symbolsArray);
+
+// console.log(Math.floor(Math.random() * 3));
+
+// on button click
+// // const passwordLength = slider.value
+// // create object which includes the selected arrays of characters
+// // e.g. if lowercase, UPPERCASE, and numbers are selected (symbols left unchecked), then the object would be {}
+
+const passwordModalBtn = document.getElementById("passwordModalBtn");
+
+passwordModalBtn.addEventListener("click", (e) => {
+	e.preventDefault();
+
+	// check status of checkboxes
+	const lowercaseChecked = document.getElementById("lowercase").checked;
+	const uppercaseChecked = document.getElementById("uppercase").checked;
+	const numbersChecked = document.getElementById("numbers").checked;
+	const symbolsChecked = document.getElementById("symbols").checked;
+
+	// check length of password slider
+	const sliderValue = slider.value;
+
+	const characterArray = [];
+
+	if (lowercaseChecked) {
+		characterArray.push(lowercaseLettersArray);
+		console.log(characterArray);
+	}
+
+	if (uppercaseChecked) {
+		characterArray.push(uppercaseLettersArray);
+		console.log(characterArray);
+	}
+	if (numbersChecked) {
+		characterArray.push(numbersArray);
+		console.log(characterArray);
+	}
+	if (symbolsChecked) {
+		characterArray.push(symbolsArray);
+		console.log(characterArray);
+	}
+
+	const password = "";
+});
