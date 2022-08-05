@@ -201,13 +201,15 @@ input:checked + label {
 }
 /* Password display on modal */
 
-.generated-password-text {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.generated-password-div {
+	/* display: flex; */
+	/* align-items: center; */
+	/* justify-content: center; */
+	min-width: 0;
+	flex-wrap: wrap;
 	background-color: lightcoral;
 	margin-left: 16px;
-	flex-grow: 1;
+	/* flex-grow: 1; */
 	/* text-align: center; */
 	font-size: 2rem;
 }

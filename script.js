@@ -64,28 +64,40 @@ passwordModalBtn.addEventListener("click", (e) => {
 	const numbersChecked = document.getElementById("numbers").checked;
 	const symbolsChecked = document.getElementById("symbols").checked;
 
-	// check length of password slider
-	const sliderValue = slider.value;
-
 	const characterArray = [];
 
 	if (lowercaseChecked) {
 		characterArray.push(lowercaseLettersArray);
-		console.log(characterArray);
 	}
 
 	if (uppercaseChecked) {
 		characterArray.push(uppercaseLettersArray);
-		console.log(characterArray);
 	}
 	if (numbersChecked) {
 		characterArray.push(numbersArray);
-		console.log(characterArray);
 	}
 	if (symbolsChecked) {
 		characterArray.push(symbolsArray);
-		console.log(characterArray);
 	}
 
-	const password = "";
+	// check length of password slider
+	const sliderValue = slider.value;
+	// console.log(sliderValue);
+
+	// make it a zero-based length
+	const characterArrayLength = characterArray.length;
+	let password = "";
+
+	for (let i = 0; i < sliderValue; i++) {
+		let randomlySelectedArray = Math.floor(Math.random() * characterArrayLength);
+		let randomlySelectedCharacter = Math.floor(Math.random() * characterArray[randomlySelectedArray].length);
+		password += characterArray[randomlySelectedArray][randomlySelectedCharacter];
+	}
+
+	// add generated password to DOM
+	const generatedPasswordDiv = document.querySelector(".generated-password-div");
+	const passwordParagraph = document.getElementById("password-paragraph");
+	console.log(passwordParagraph);
+
+	passwordParagraph.textContent = password;
 });
