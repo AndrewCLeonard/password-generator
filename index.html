@@ -24,6 +24,38 @@
 				</div>
 			</div>
 		</div>
+		<!-- Open the Modal -->
+		<!-- Modal -->
+		<div class="modal" id="modal">
+			<!-- Modal Content -->
+			<div class="modal-content">
+				<div class="modal-close">&times;</div>
+				<div class="modal-header">
+					<h2>Password Options</h2>
+				</div>
+				<div class="modal-body">
+					<div></div>
+					<div class="modal-checkboxes">
+						<form>
+							<input type="checkbox" id="lowercase" name="lowercase" value="lowercase" />
+							<label for="lowercase"> lowercase</label><br />
+							<input type="checkbox" id="uppercase" name="uppercase" value="uppercase" />
+							<label for="uppercase"> UPPERCASE</label><br />
+							<input type="checkbox" id="numbers" name="numbers" value="numbers" />
+							<label for="numbers"> numbers</label><br />
+							<input type="checkbox" id="symbols" name="symbols" value="symbols" />
+							<label for="symbols"> symbols</label><br /><br />
+							<input type="range" min="8" max="30" value="12" name="length" id="passwordSlider" class="slider" /><br />
+							<p>value: <span class="slider-value" id="slider-value"></span></p>
+							<button class="btn">Create</button>
+						</form>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<h3>modal footer</h3>
+				</div>
+			</div>
+		</div>
 		<script src="script.js"></script>
 	</body>
 </html>
